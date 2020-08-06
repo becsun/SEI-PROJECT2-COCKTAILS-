@@ -1,6 +1,8 @@
 body {
   background-color: rgb(2, 0, 0);
 }
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
 .wallPaper {
   background-image: url('../components/common/images/Hanky-Panky-in-Budapest.jpg');
   background-repeat: no-repeat;
@@ -16,22 +18,34 @@ body {
   display:flex;
   flex-direction: column;
   justify-content: center;
-  align-items:center;
-  width:700px;
+  align-items:flex-start;
+  width:900px;
   height:700px;
-  color:white;
+  color:lightgray;
   margin: 20px 0px;
+  h1 {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 50px;
+    font-weight: lighter;
+    padding:20px 20px 0 20px;
+  }
+  h3 {
+    font-family: 'Yellowtail', cursive;
+    font-size: 30px;
+    font-weight: lighter;
+    padding:0px 20px 20px 20px;
+  }
 }
 .navbarstyle {
   display:flex;
   justify-content: space-around;
   background-color: rgb(69, 14, 14);
   height: 60px;
-  color:white;
+  color:lightgray;
   margin:20px 0px 0px 0px;
 }
 a {
-  color:white;
+  color:lightgray;
   text-decoration: none;
   font-size: 30px;
   padding:10px
@@ -43,7 +57,7 @@ a {
   align-items:flex-start;
   background-color:black;
   // width:600px;
-  color:white;
+  color:lightgray;
   padding:20px;
   border: grey solid 1px;
   padding:20px;
@@ -61,7 +75,25 @@ a {
   flex-direction: row; 
   align-items:flex-start;
   padding:5px;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 400px;
+  .buttonImage {
+    width:50px;
+    height:50px;
+    margin: 30px 50px;
+  }
 }
 .cocktailText {
+  display:flex;
+  flex-direction:column;
+  justify-content: space-between;
   padding:15px;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 350px;
+}
+.buttonDiv {
+  .buttonImage {
+    width:50px;
+    height:50px;
+  }
 }
