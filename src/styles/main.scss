@@ -1,0 +1,67 @@
+body {
+  background-color: rgb(2, 0, 0);
+}
+.wallPaper {
+  background-image: url('../components/common/images/Hanky-Panky-in-Budapest.jpg');
+  background-repeat: no-repeat;
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+}
+.homestyle {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  width:700px;
+  height:700px;
+  color:white;
+  margin: 20px 0px;
+}
+.navbarstyle {
+  display:flex;
+  justify-content: space-around;
+  background-color: rgb(69, 14, 14);
+  height: 60px;
+  color:white;
+  margin:20px 0px 0px 0px;
+}
+a {
+  color:white;
+  text-decoration: none;
+  font-size: 30px;
+  padding:10px
+}
+.cocktailCard {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+  background-color:black;
+  // width:600px;
+  color:white;
+  padding:20px;
+  border: grey solid 1px;
+  padding:20px;
+  width:750px;
+  img {
+    width:400px;
+  }
+  h4{
+    font-weight: lighter;
+    font-size: 15px;;
+  }
+}
+.innercard {
+  display:flex;
+  flex-direction: row; 
+  align-items:flex-start;
+  padding:5px;
+}
+.cocktailText {
+  padding:15px;
+}
