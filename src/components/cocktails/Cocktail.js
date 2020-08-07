@@ -9,7 +9,8 @@ class Cocktail extends React.Component{
     measurements: '',
     classbutton: 'buttonImage',
     ingredients: [],
-    measures: []
+    measures: [],
+    combined: []
   }
   async componentDidMount() {
     try {
@@ -24,6 +25,7 @@ class Cocktail extends React.Component{
       const booze = res.data.drinks[0]
       const ingredients = []
       const measures = []
+      const combined = []
       for (const key in booze) {
         if (key.startsWith('strIngredient')){
           ingredients.push(booze[key])
@@ -37,31 +39,37 @@ class Cocktail extends React.Component{
       } console.log(measures.filter(i => i))
       this.setState({ booze , measures: measures.filter(i => i) })
       this.setState({ booze: res.data.drinks[0] })
+      for (let i = 0; i < this.state.ingredients.length ; i ++){
+        combined.push(this.state.ingredients[i] + ' ' + this.state.measures[i] + ' ') 
+      } 
+      this.setState({ combined: combined  })
+      console.log(this.state.combined)
     } catch (err){
       console.log('an error has occured'  + err)
     }
-
-    for (const key in measures) {
-      if (key.startsWith('strIngredient')){
-        ingredients.push(booze[key])
-      }
-    }
-
-
-
-
-
-
+    console.log(this.state.combined)
   }
+
+  // {this.state.info.hours.map(time => {
+  //   return <li key={time.day}>{time.day}: {time.times}</li>
+  // })}
+
+  //    this.state.measures[i].map((measure) => {
+  //   return <li key={measure[i]}>{measure[i]}</li>
+  // )}
+  // console.log(listItems)
+  // }
+
   clickDrink = () => {
     this.setState({ classbutton: 'buttonImage' })
     this.setState({ measurements: '' })
+    this.setState({ message: ' ' })
     return (this.getDrink())
   }
   getRecipe = () => {
     this.setState({ classbutton: 'invisible' })
-
-
+    this.setState({ message: this.state.combined })
+    // {this.state.booze.strInstructions}
     // this is a cheeky placeholder after all the failed maps, filters and for loops
     // this.setState({ message: this.state.booze.drinks[0].strInstructions })
     // this.setState({ measurements: this.state.booze.drinks[0].strIngredient1 + ' ' + this.state.booze.drinks[0].strMeasure1 + 
@@ -76,7 +84,14 @@ class Cocktail extends React.Component{
             <div><img src={this.state.booze.strDrinkThumb}></img></div>
             <div className="cocktailText">
               <div><h2>{this.state.booze.strDrink}</h2></div>
-              <div><h4>{this.state.message}<p>{this.state.measurements}</p></h4></div>
+              <div><h4><p>{this.state.booze.strInstructions}</p></h4>
+                <ul>
+                  {this.state.combined.map((ingredient) => {
+                    return <li key={ingredient.idDrink}>{ingredient}</li>
+                  })}
+                </ul>
+
+              </div>
               <div className="buttonDiv">
                 <img className ="buttonImage" src={cross} width="50" height="50" onClick={this.clickDrink}></img>
                 <img id ="checkmark" className ={this.state.classbutton} src={check} width="50" height="50"  onClick={this.getRecipe}></img>
