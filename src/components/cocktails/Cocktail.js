@@ -6,7 +6,7 @@ class Cocktail extends React.Component{
   state={
     booze: null,
     message: ' ',
-    measurements: '',
+    instructions: '',
     classbutton: 'buttonImage',
     ingredients: [],
     measures: [],
@@ -47,20 +47,9 @@ class Cocktail extends React.Component{
     } catch (err){
       console.log('an error has occured'  + err)
     }
-    console.log(this.state.combined)
   }
-
-  // {this.state.info.hours.map(time => {
-  //   return <li key={time.day}>{time.day}: {time.times}</li>
-  // })}
-
-  //    this.state.measures[i].map((measure) => {
-  //   return <li key={measure[i]}>{measure[i]}</li>
-  // )}
-  // console.log(listItems)
-  // }
-
   clickDrink = () => {
+    this.setState({ instructions: ' ' })
     this.setState({ classbutton: 'buttonImage' })
     this.setState({ measurements: '' })
     this.setState({ message: ' ' })
@@ -68,12 +57,10 @@ class Cocktail extends React.Component{
   }
   getRecipe = () => {
     this.setState({ classbutton: 'invisible' })
-    this.setState({ message: this.state.combined })
-    // {this.state.booze.strInstructions}
-    // this is a cheeky placeholder after all the failed maps, filters and for loops
-    // this.setState({ message: this.state.booze.drinks[0].strInstructions })
-    // this.setState({ measurements: this.state.booze.drinks[0].strIngredient1 + ' ' + this.state.booze.drinks[0].strMeasure1 + 
-    // ' , ' +  this.state.booze.drinks[0].strIngredient2 + ' ' + this.state.booze.drinks[0].strMeasure2 + ' ' })
+    this.setState({ instructions: this.state.booze.strInstructions })
+    this.setState({ message: this.state.combined.map((ingredient) => {
+      return <li key={ingredient.idDrink}>{ingredient}</li>
+    }) })
   }
   render(){
     if (!this.state.booze) return null
@@ -83,18 +70,17 @@ class Cocktail extends React.Component{
           <div className="innercard">
             <div><img src={this.state.booze.strDrinkThumb}></img></div>
             <div className="cocktailText">
-              <div><h2>{this.state.booze.strDrink}</h2></div>
-              <div><h4><p>{this.state.booze.strInstructions}</p></h4>
-                <ul>
-                  {this.state.combined.map((ingredient) => {
-                    return <li key={ingredient.idDrink}>{ingredient}</li>
-                  })}
-                </ul>
-
-              </div>
-              <div className="buttonDiv">
-                <img className ="buttonImage" src={cross} width="50" height="50" onClick={this.clickDrink}></img>
-                <img id ="checkmark" className ={this.state.classbutton} src={check} width="50" height="50"  onClick={this.getRecipe}></img>
+              <div className="cocktailText">
+                <div><h2>{this.state.booze.strDrink}</h2></div>
+                <div><h4><p>{this.state.instructions}</p></h4>
+                  <ul>
+                    {this.state.message}
+                  </ul>
+                </div>
+                <div className="buttonDiv">
+                  <img className ="buttonImage" src={cross} width="50" height="50" onClick={this.clickDrink}></img>
+                  <img id ="checkmark" className ={this.state.classbutton} src={check} width="50" height="50"  onClick={this.getRecipe}></img>
+                </div>
               </div>
             </div>
           </div>

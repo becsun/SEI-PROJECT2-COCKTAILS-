@@ -4,6 +4,7 @@ body {
 @import url("https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,400&display=swap');
 .wallPaper {
   background-image: url('../components/common/images/Hanky-Panky-in-Budapest.jpg');
   background-repeat: no-repeat;
@@ -44,12 +45,13 @@ body {
   height: 60px;
   color:lightgray;
   margin:20px 0px 0px 0px;
+  font-family: 'Roboto', sans-serif;
 }
 a {
-  color:lightgray;
+  color:rgb(155, 153, 153);
   text-decoration: none;
-  font-size: 30px;
-  padding:10px
+  font-size: 25px;
+  padding:15px
 }
 .cocktailCard {
   display:flex;
@@ -68,20 +70,20 @@ a {
   }
   h4{
     font-weight: lighter;
-    font-size: 15px;;
+    font-size: 15px;
   }
 }
 .innercard {
   display:flex;
   flex-direction: row; 
   align-items:flex-start;
-  padding:5px;
+  padding:15px;
   font-family: Arial, Helvetica, sans-serif;
   min-height: 400px;
   .buttonImage {
     width:50px;
     height:50px;
-    margin: 30px 50px;
+    margin: 10px 25px;
   }
 }
 .cocktailText {
@@ -120,4 +122,9 @@ a {
 }
 .errorText {
   padding:20px;
+}
+.cocktailTitle {
+  display:flex;
+  align-items:center;
+  justify-content: flex-start;
 }
