@@ -62,7 +62,7 @@ a {
   padding:20px;
   border: grey solid 1px;
   padding:20px;
-  width:750px;
+  width:850px;
   img {
     width:400px;
   }
@@ -98,7 +98,10 @@ a {
     height:50px;
   }
 }
-
+.invisible {
+  height:0px;
+  width:0px;
+}
 .error-page{
   display:flex;
   align-items: flex-end;
@@ -114,5 +117,7 @@ a {
   font-size: 47px;
   font-family: 'Chelsea Market', cursive;
   border: solid 3PX;
-  
+}
+.errorText {
+  padding:20px;
 }

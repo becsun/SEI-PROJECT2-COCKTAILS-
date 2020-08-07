@@ -4,7 +4,6 @@ import Home from './components/common/Home'
 import Navbar from './components/common/Nav'
 import Cocktail from './components/cocktails/Cocktail'
 import Error from './components/common/Error'
-
 console.log(process.env.REACT_APP_MY_API_KEY)
 const App = () => {
   return (
@@ -16,7 +15,6 @@ const App = () => {
             <Route exact path="/" component={ Home } />
             <Route exact path="/cocktail" component={ Cocktail } />
             <Route path="/*" component={Error} />
-
           </Switch>
         </div>
       </BrowserRouter>
