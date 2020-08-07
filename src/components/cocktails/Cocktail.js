@@ -19,7 +19,7 @@ class Cocktail extends React.Component{
     try {
       const res = await axios.get('https://www.thecocktaildb.com/api/json/v1/1/random.php')
       // console.log({ booze: res.data })
-      this.setState({ booze: res.data })
+      this.setState({ booze: res.data})
       this.setState({ message: 'All you need to know: It has ' +  this.state.booze.drinks[0].strIngredient1 
       + ' and ' +  this.state.booze.drinks[0].strIngredient2 })
     } catch (err){
