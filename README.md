@@ -1,9 +1,9 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) GA London React Template
+ # General Assembly | SEI-49 -project-two
 
-`yarn start` to run the development server
+![homepage](readmeAssets/alcohol-u-later-frontpage.png)
 
-`yarn build` to create a build directory
+## :star2: Overview
 
+Working in a team of 2, Aisaith and i created an app for the user to choose a cocktail they would like to make themselves. By clicking on the tick you will see the instructions and ingredients.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+![demo](readmeAssets/alcoholgif.gif)
