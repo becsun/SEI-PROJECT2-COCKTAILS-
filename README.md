@@ -6,7 +6,7 @@
 
 Working in a team of 2, Aishath and i created an app for the user to choose a cocktail they would like to make themselves. By clicking on the tick you will see the instructions and ingredients.
 
-![demo](readmeAssets/alcoholgif.gif)
+![demo](readmeAssets/alcohol-u-later.gif)
 ## :hourglass_flowing_sand: Timeframe
 
 48 Hours
