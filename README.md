@@ -20,7 +20,6 @@ Working in a team of 2, Aishath and i created an app for the user to choose a co
 * Google Fonts
 * REACT, react-Router-Dom
 * Axios
-* Bulma
 * Development server: Yarn
 
 ##  The API
