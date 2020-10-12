@@ -98,7 +98,7 @@ The logic to combine the ingredients to the measurements.
 
 Had a great time working with Aishath. Felt like a great achievement to finish an app in a hackathon style of 48hours and also incorporating an API to the application.
 
-## :bulb: Key Learning
+## :bulb: Key Learnings
 
 Understanding how to use components to split the application up into smaller files. Making sure to plan out what the objectives are for an application which will make the steps clearer to reach the end goal.
 
