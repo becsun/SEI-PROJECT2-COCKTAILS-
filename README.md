@@ -4,8 +4,9 @@
   
 
 ![homepage](readmeAssets/alcohol-u-later-frontpage.png)
-
-  
+<br>
+If you want to have a look at my game, click on:
+https://a-drink-to-suit-your-mood.netlify.app/
 
 ## :star2: Overview
 
@@ -103,4 +104,3 @@ Had a great time working with Aishath. Felt like a great achievement to finish a
 Understanding how to use components to split the application up into smaller files. Making sure to plan out what the objectives are for an application which will make the steps clearer to reach the end goal.
 
 
-https://a-drink-to-suit-your-mood.netlify.app/
